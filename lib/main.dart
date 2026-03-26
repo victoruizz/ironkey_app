@@ -76,33 +76,36 @@ class _IronKeyScreenState extends State<IronKeyScreen> {
     return Scaffold(
       body: SafeArea(child: Column(
         children: [
-          Expanded(child: Column(children: [
-            ClipOval(
-              child: SizedBox(
-                width: 150,
-                height: 150,
-                child: Image.asset("assets/images/shelby.png"),
+          Expanded(child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(children: [
+              ClipOval(
+                child: SizedBox(
+                  width: 150,
+                  height: 150,
+                  child: Image.asset("assets/images/shelby.png"),
+                ),
               ),
-            ),
-            SizedBox(height: 16),
-            Text(
-              "Sua maldita senha!",
-              textAlign: TextAlign.center,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 24),
-            ),
-            SizedBox(height: 16),
-            TextField(controller: _passwordController,
-            maxLength: 12,
-            decoration: InputDecoration(
-              labelText: "Password",
-              border: OutlineInputBorder(),
-              prefix: Icon(Icons.lock),
-              suffixIcon: _passwordController.text.isNotEmpty ? IconButton(onPressed: () {copyPassword(_passwordController.text);}, icon: Icon(Icons.copy)) : null,
-            ),
-            )
-          ],),),
+              SizedBox(height: 16),
+              Text(
+                "Sua maldita senha!",
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 24),
+              ),
+              SizedBox(height: 16),
+              TextField(controller: _passwordController,
+              maxLength: 12,
+              decoration: InputDecoration(
+                labelText: "Password",
+                border: OutlineInputBorder(),
+                prefix: Icon(Icons.lock),
+                suffixIcon: _passwordController.text.isNotEmpty ? IconButton(onPressed: () {copyPassword(_passwordController.text);}, icon: Icon(Icons.copy)) : null,
+              ),
+              )
+            ],),
+          ),),
 
           SizedBox(
             width: double.infinity,
