@@ -21,7 +21,7 @@ class AppTheme {
     secondary: primaryLight,
     onSecondary: onPrimaryLight,
     error: Colors.red,
-    onError: Colors.white,
+    onError: Colors.white,  
     surface: backgroundLight,
     onSurface: onSurfaceLight,
   );
@@ -50,3 +50,5 @@ class AppTheme {
     scaffoldBackgroundColor: backgroundDark,
   );
 }
+
+

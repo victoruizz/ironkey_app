@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(flutter run:*)"
+      "Bash(flutter run:*)",
+      "Bash(flutter doctor:*)",
+      "Bash(where flutter:*)",
+      "Bash(\"/c/Users/FFramework Victor/Downloads/flutter/bin/flutter\" run)"
     ]
   }
 }
